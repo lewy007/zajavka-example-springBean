@@ -1,23 +1,9 @@
 package pl.zajavka;
 
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 
 @Configuration
+@Import(value = {ConfigurationClassFirst.class, ConfigurationClassSecond.class})
 public class ExampleConfigurationClass {
-
-    @Bean
-    public ExampleBean exampleBean(InjectedBean injectedBean, AnotherInjectedBean anotherInjectedBean) {
-        return new ExampleBean(injectedBean, anotherInjectedBean);
-    }
-
-    @Bean
-    public InjectedBean injectedBean() {
-        return new InjectedBean();
-    }
-
-    @Bean
-    public AnotherInjectedBean anotherInjectedBean() {
-        return new AnotherInjectedBean();
-    }
 }
