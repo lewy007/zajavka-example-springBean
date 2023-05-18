@@ -3,16 +3,12 @@ package pl.zajavka;
 public class ExampleBean {
 
     private final InjectedBean injectedBean;
-    private AnotherInjectedBean anotherInjectedBean;
+    private final AnotherInjectedBean anotherInjectedBean;
 
-    public ExampleBean(InjectedBean injectedBean) {
+    public ExampleBean(InjectedBean injectedBean, AnotherInjectedBean anotherInjectedBean) {
         this.injectedBean = injectedBean;
-        System.out.println("Calling ExampleBean()");
-    }
-
-    public void setAnotherInjectedBean(AnotherInjectedBean anotherInjectedBean) {
         this.anotherInjectedBean = anotherInjectedBean;
-        System.out.println("Calling setAnotherInjectedBean()");
+        System.out.println("Calling ExampleBean()");
     }
 
     public void exampleMethod(){
