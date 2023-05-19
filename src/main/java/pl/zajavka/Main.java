@@ -9,8 +9,7 @@ public class Main {
         ApplicationContext context = new AnnotationConfigApplicationContext(ExampleConfigurationClass.class);
 
         System.out.println("Context created.");
-        InjectedBean injectedBean = context.getBean("injectedBean", InjectedBean.class);
-        injectedBean.someMethod();
-        //Arrays.asList(context.getBeanDefinitionNames()).forEach(name-> System.out.println());
+        ExampleBean exampleBean = context.getBean("exampleBean", ExampleBean.class);
+        exampleBean.exampleMethod();
     }
 }

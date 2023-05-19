@@ -22,3 +22,19 @@ public class ExampleConfigurationClass {
 ```
 
 ### Adnotacjami springowymi oznacza siê klasy które maj¹ s³u¿yæ do logiki biznesowej
+
+### adnotacja autowired sluzy do automatycznego wiazania beanow przez springa, poniewaz mu wskazujemy ktore konstruktory ma wybierac.
+```java
+public class Main() {
+    public ExampleBean() {
+        System.out.println("Calling ExampleBean()");
+    }
+
+    @Autowired
+    public ExampleBean(InjectedBean injectedBean, AnotherInjectedBean anotherInjectedBean) {
+        this.injectedBean = injectedBean;
+        this.anotherInjectedBean = anotherInjectedBean;
+        System.out.println("Calling ExampleBean(...)");
+    }
+}
+```
