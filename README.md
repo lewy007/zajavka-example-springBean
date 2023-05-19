@@ -11,3 +11,14 @@ public class Main{
     }
 }
 ```
+
+### kolejnym etapem jest ³¹czenie adnotacji springowych z java. Wykorzystuj¹c adnotacjê CmponentScan wskazujemy (mo¿na wskazaæ paczkê lub interfejs który znajduje siê w danej paczce) gdzie spring ma wyszukiwaæ beanów (klas ozanczonych stereotypem Springowym, czyli adnotacjami typu Component, Service, Repository, Controller)
+```java
+@Configuration
+@ComponentScan(basePackages = "pl.zajavka")
+@ComponentScan(basePackageClasses = Marker.class)
+public class ExampleConfigurationClass {
+}
+```
+
+### Adnotacjami springowymi oznacza siê klasy które maj¹ s³u¿yæ do logiki biznesowej
