@@ -18,7 +18,7 @@ public class ExampleBean {
     public ExampleBean(InjectedBean injectedBean, AnotherInjectedBean anotherInjectedBean, BeanInterface bean2) {
         this.injectedBean = injectedBean;
         this.anotherInjectedBean = anotherInjectedBean;
-        this.beanInterface= bean2;
+        this.beanInterface = bean2;
         System.out.println("Calling ExampleBean(...)");
     }
 

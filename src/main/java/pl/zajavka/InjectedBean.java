@@ -8,7 +8,15 @@ public class InjectedBean {
         System.out.println("Calling InjectedBean()");
     }
 
-    public void someMethod(){
+    public void someMethod() {
         System.out.println("Calling InjectedBean#someMethod()");
+    }
+
+    public void initMethod() {
+        System.out.println("Calling initMethod in ExampleBean");
+    }
+
+    public void destroyMethod() {
+        System.out.println("Calling destroyMethod in ExampleBean");
     }
 }
