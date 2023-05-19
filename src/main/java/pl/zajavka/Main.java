@@ -11,5 +11,6 @@ public class Main {
         System.out.println("Context created.");
         ExampleBean exampleBean = context.getBean("exampleBean", ExampleBean.class);
         exampleBean.exampleMethod();
+//        Arrays.asList(context.getBeanDefinitionNames()).forEach(System.out::println);
     }
 }
