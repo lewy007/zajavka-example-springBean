@@ -32,7 +32,7 @@ public class Main {
         System.out.println("prototype1 == prototype2 ?" + (prototype1 == prototype2));
 
         System.out.println("### BEFORE CLOSING CONTEXT ###");
-        //context.close();
+        context.close();
         System.out.println("### AFTER CLOSING CONTEXT ###");
 //        Arrays.asList(context.getBeanDefinitionNames()).forEach(System.out::println);
 
