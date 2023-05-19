@@ -21,9 +21,20 @@ public class Main {
         injectedBean.someMethod();
         System.out.println("### AFTER CALLING METHOD ###");
 
+        System.out.println("### SCOPE ###");
+        ExampleSingletonBean singleton1 = context.getBean(ExampleSingletonBean.class);
+        ExampleSingletonBean singleton2 = context.getBean(ExampleSingletonBean.class);
+
+        ExamplePrototypeBean prototype1 = context.getBean(ExamplePrototypeBean.class);
+        ExamplePrototypeBean prototype2 = context.getBean(ExamplePrototypeBean.class);
+
+        System.out.println("singleton1 == singleton2 ?" + (singleton1 == singleton2));
+        System.out.println("prototype1 == prototype2 ?" + (prototype1 == prototype2));
+
         System.out.println("### BEFORE CLOSING CONTEXT ###");
-        context.close();
+        //context.close();
         System.out.println("### AFTER CLOSING CONTEXT ###");
 //        Arrays.asList(context.getBeanDefinitionNames()).forEach(System.out::println);
+
     }
 }

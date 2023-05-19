@@ -38,3 +38,8 @@ public class Main() {
     }
 }
 ```
+
+### Obiekty springowe sa domyslnie SINGLETON, wiec za kazdym razem jak odwolamy sie do pobrania obiektu danego typu to spring odwoluje sie do tego samego obiektu:
+### SCOPE:
+### SINGLETON - default
+### PROTOTYPE - trzeba ustawic i wtedy za kazdym odwolaniem sie do obiektu, bedzie tworzony nowy obiekt
